@@ -15,10 +15,7 @@ public class Conexion {
     private final String password = "informaticdv2016";
     private final String url = "jdbc:mysql://localhost/" + base;
 
-    private final String base = "tienda";
-    private final String user = "root";
-    private final String password = "";
-    private final String url = "jdbc:mysql://localhost:3306/" + base;
+
 
     private Connection con = null;
     
