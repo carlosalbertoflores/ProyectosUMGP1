@@ -10,6 +10,7 @@ import java.util.logging.Logger;
 public class Conexion {
     
 
+
     private final String base = "t";
     private final String user = "usuario";
     private final String password = "";
@@ -17,6 +18,12 @@ public class Conexion {
 
 
 
+=======
+    private final String base = "tienda";
+    private final String user = "rooot";
+    private final String password = "";
+    private final String url = "jdbc:mysql://localhost/3306/" + base;
+ master
     private Connection con = null;
     
     public Connection getConexion()

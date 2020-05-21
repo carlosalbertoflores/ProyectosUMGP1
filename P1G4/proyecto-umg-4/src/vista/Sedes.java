@@ -6,16 +6,17 @@
 package vista;
 import java.sql.*;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 /**
  *
- * @author familia Sipaque
+ * @author PERSONAL
  */
-public class Aulas extends javax.swing.JInternalFrame {
+public class Sedes extends javax.swing.JFrame {
 
     /**
-     * Creates new form Aulas
+     * Creates new form Sedes
      */
-    public Aulas() {
+    public Sedes() {
         initComponents();
     }
 
@@ -28,53 +29,32 @@ public class Aulas extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel11 = new javax.swing.JLabel();
+        label_status = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        txt_1 = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
         txt_3 = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
         txt_2 = new javax.swing.JTextField();
         txt_buscar = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        label_status = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        txt_1 = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
 
-        setClosable(true);
-        setIconifiable(true);
-        setMaximizable(true);
-        setVisible(true);
-
-        jButton6.setText("Eliminar");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel11.setText("codigo Aula:");
+        jLabel11.setText("codigo :");
+
+        label_status.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        label_status.setForeground(new java.awt.Color(255, 51, 51));
 
         jButton1.setText("Registrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
-            }
-        });
-
-        label_status.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        label_status.setForeground(new java.awt.Color(255, 51, 51));
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel4.setText("Estatus Aula:");
-
-        jButton2.setText("Buscar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
             }
         });
 
@@ -85,14 +65,28 @@ public class Aulas extends javax.swing.JInternalFrame {
             }
         });
 
+        jButton2.setText("Buscar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel4.setText("Estatus del sedes");
+
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel3.setText("Nombre Aula:  ");
+        jLabel3.setText("Nombre del sedes ");
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel13.setText("Ingrese el codigo del Aula :");
+        jLabel13.setText("Ingrese el codigo sedes :");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setText("Mantenimiento Aulas");
+        jButton6.setText("Eliminar");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -103,15 +97,18 @@ public class Aulas extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel11))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_3, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_2, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_3, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel11)
+                                .addGap(18, 18, 18)
+                                .addComponent(txt_1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_2, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(23, 23, 23)
                         .addComponent(jButton1)
@@ -130,21 +127,22 @@ public class Aulas extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(label_status, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(101, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(txt_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txt_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel3))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -161,18 +159,85 @@ public class Aulas extends javax.swing.JInternalFrame {
                     .addComponent(jButton2))
                 .addGap(18, 18, 18)
                 .addComponent(label_status, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // se registran todo los empleados
+        try {
+
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/umg4", "root", "");
+            PreparedStatement pst = cn.prepareStatement("insert into sedes values(?,?,?)");
+
+            pst.setString(1, "0");
+       
+            pst.setString(2, txt_2.getText().trim());
+            pst.setString(3, txt_3.getText().trim());
+
+            pst.executeUpdate();
+
+            txt_1.setText("");
+            txt_2.setText("");
+            txt_3.setText("");
+
+            label_status.setText("Registro  exitoso.");
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        try {
+            String ID = txt_buscar.getText().trim();
+
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/umg4", "root", "");
+            PreparedStatement pst = cn.prepareStatement("update sedes set codigo = ? , nombre =? , estatus = ?  where codigo = " + ID);
+
+            pst.setString(1, txt_1.getText().trim());
+            pst.setString(2, txt_2.getText().trim());
+            pst.setString(3, txt_3.getText().trim());
+
+            pst.executeUpdate();
+
+            label_status.setText("Modificacion exitosa.");
+
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        try {
+            Connection cn;
+            cn = DriverManager.getConnection("jdbc:mysql://localhost/umg4", "root", "");
+            PreparedStatement pst = cn.prepareStatement("select * from sedes where codigo = ?");
+            pst.setString(1, txt_buscar.getText().trim());
+            ResultSet rs = pst.executeQuery();
+
+            if (rs.next()) {
+
+                txt_1.setText(rs.getString("codigo"));
+                txt_2.setText(rs.getString("nombre"));
+                txt_3.setText(rs.getString("estatus"));
+
+            } else {
+                JOptionPane.showMessageDialog(null, " no registrado.");
+            }
+
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // Funcion donde se elimanar cualquier registro del contenedor
+        // TODO add your handling code here:
 
         try {
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/umg4", "root", "");
-            PreparedStatement pst = cn.prepareStatement("delete from aulas where ID = ?");
+            PreparedStatement pst = cn.prepareStatement("delete from sedes where codigo = ?");
 
             pst.setString(1, txt_buscar.getText().trim());
             pst.executeUpdate();
@@ -187,80 +252,46 @@ public class Aulas extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // se registran todo los empleados
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
         try {
-
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/umg4", "root", "");
-            PreparedStatement pst = cn.prepareStatement("insert into aulas values(?,?,?,?)");
-
-            pst.setString(1, "0");
-            pst.setString(2, txt_1.getText().trim());
-            pst.setString(3, txt_2.getText().trim());
-            pst.setString(4, txt_3.getText().trim());
-
-            pst.executeUpdate();
-
-            txt_1.setText("");
-            txt_2.setText("");
-            txt_3.setText("");
-
-            label_status.setText("Registro  exitoso.");
-        } catch (Exception e) {
-
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // Funcion de donde se busca los registros y buscar si esta registrado o no
-        try {
-            Connection cn;
-            cn = DriverManager.getConnection("jdbc:mysql://localhost/umg4", "root", "");
-            PreparedStatement pst = cn.prepareStatement("select * from aulas where ID = ?");
-            pst.setString(1, txt_buscar.getText().trim());
-            ResultSet rs = pst.executeQuery();
-
-            if (rs.next()) {
-
-                txt_1.setText(rs.getString("codigo_aulas"));
-                txt_2.setText(rs.getString("nombre_aulas"));
-                txt_3.setText(rs.getString("estatus_aulas"));
-
-            } else {
-                JOptionPane.showMessageDialog(null, " no registrado.");
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
             }
-
-        } catch (Exception e) {
-
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Sedes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Sedes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Sedes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Sedes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+        //</editor-fold>
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        try {
-            String ID = txt_buscar.getText().trim();
-
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/umg4", "root", "");
-            PreparedStatement pst = cn.prepareStatement("update aulas set codigo_aulas = ?, nombre_aulas = ?, estatus_aulas = ?  where ID = " + ID);
-
-            pst.setString(1, txt_1.getText().trim());
-            pst.setString(2, txt_2.getText().trim());
-            pst.setString(3, txt_3.getText().trim());
-
-            pst.executeUpdate();
-
-            label_status.setText("Modificacion exitosa.");
-
-        } catch (Exception e) {
-        }
-    }//GEN-LAST:event_jButton5ActionPerformed
-
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Sedes().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel3;
