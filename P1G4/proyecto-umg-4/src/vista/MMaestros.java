@@ -16,14 +16,16 @@ import javax.swing.JOptionPane;
  *
  * @author leone
  */
-public class MantenimientodeMaestros extends javax.swing.JInternalFrame {
+public class MMaestros extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form Mantenimiento_de_Maestros
      */
-    public MantenimientodeMaestros() {
+    public MMaestros() {
         initComponents();
     }
+
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -50,7 +52,7 @@ public class MantenimientodeMaestros extends javax.swing.JInternalFrame {
         jTextField6 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 204, 153));
+        setBackground(new java.awt.Color(51, 51, 51));
         setVisible(true);
 
         jButton1.setBackground(new java.awt.Color(153, 204, 255));

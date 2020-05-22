@@ -12,6 +12,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import java.sql.*;
 
 /**
  *
@@ -54,7 +55,9 @@ public class ManFacultades extends javax.swing.JInternalFrame {
         setMaximizable(true);
         setVisible(true);
 
+        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel3.setForeground(new java.awt.Color(0, 24, 23));
 
         jLabel8.setText("Código Facultad:");
 
@@ -62,21 +65,21 @@ public class ManFacultades extends javax.swing.JInternalFrame {
 
         jLabel10.setText("Estado Facultad:");
 
-        btAlta2.setText("Alta");
+        btAlta2.setText("Registar");
         btAlta2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btAlta2ActionPerformed(evt);
             }
         });
 
-        btBaja.setText("Baja");
+        btBaja.setText("Eliminar");
         btBaja.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btBajaActionPerformed(evt);
             }
         });
 
-        btCambio.setText("Cambio");
+        btCambio.setText("Modificar");
         btCambio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btCambioActionPerformed(evt);
@@ -100,13 +103,11 @@ public class ManFacultades extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(btAlta2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btBaja, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btCambio, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel11)
+                        .addGap(18, 18, 18)
+                        .addComponent(Txtbusqueda))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel9)
@@ -116,15 +117,16 @@ public class ManFacultades extends javax.swing.JInternalFrame {
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(Txtcodigofacultad)
                                     .addComponent(Txtnombrefacultad, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
-                                    .addComponent(Txtestadofacultad))))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel11)
-                        .addGap(18, 18, 18)
-                        .addComponent(Txtbusqueda))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(Txtestadofacultad)))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(btAlta2, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)
+                                .addComponent(btBaja, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btCambio)
+                                .addGap(18, 18, 18)
+                                .addComponent(btBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -142,18 +144,21 @@ public class ManFacultades extends javax.swing.JInternalFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(Txtestadofacultad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btAlta2)
-                    .addComponent(btBaja)
-                    .addComponent(btCambio))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(Txtbusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btBuscar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel11)
+                            .addComponent(Txtbusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(53, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btAlta2)
+                            .addComponent(btBaja)
+                            .addComponent(btCambio)
+                            .addComponent(btBuscar))
+                        .addContainerGap())))
         );
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -164,13 +169,12 @@ public class ManFacultades extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(jLabel1)))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addComponent(jLabel1)
+                .addContainerGap(122, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,8 +182,8 @@ public class ManFacultades extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -187,10 +191,10 @@ public class ManFacultades extends javax.swing.JInternalFrame {
 
     private void btAlta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAlta2ActionPerformed
  try{
-             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/facultades", "root", "");
-            PreparedStatement pst = cn.prepareStatement("insert into facultad values(?,?,?)");
+             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/umg4", "root", "");
+            PreparedStatement pst = cn.prepareStatement("insert into facultades values(?,?,?)");
             
-            pst.setString(1, "0");
+            pst.setString(1, Txtcodigofacultad.getText().trim());
             pst.setString(2, Txtnombrefacultad.getText().trim());
             pst.setString(3, Txtestadofacultad.getText().trim());
             pst.executeUpdate();
@@ -209,11 +213,11 @@ try {
             
  
 
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/facultades", "root", "");
-            PreparedStatement pst = cn.prepareStatement("update facultad set nombre_facultad = ?, estado_facultad = ? where id_facultad = " + ID);
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/umg4", "root", "");
+            PreparedStatement pst = cn.prepareStatement("update facultades set nombre_facultad = ?, estado_facultad = ? where id_facultad = " + ID);
             
-            pst.setString(1, txtNomFacu.getText().trim());
-            pst.setString(2, txtEsFacu.getText().trim());
+            pst.setString(1, Txtcodigofacultad.getText().trim());
+            pst.setString(2, Txtestadofacultad.getText().trim());
             pst.executeUpdate();
             
             JOptionPane.showMessageDialog(null, "REGISTRO MODIFICADO");
@@ -230,13 +234,13 @@ try {
       try {
 
 
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/facultades", "root", "");
-            PreparedStatement pst = cn.prepareStatement("delete from facultad where id_facultad = ?");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/umg4", "root", "");
+            PreparedStatement pst = cn.prepareStatement("delete from facultades where id_facultad = ?");
             
             pst.setString(1, Txtbusqueda.getText().trim());
             pst.executeUpdate();
-            txtNomFacu.setText("");
-            txtEsFacu.setText("");
+            Txtcodigofacultad.setText("");
+            Txtestadofacultad.setText("");
             Txtbusqueda.setText("");
             
             JOptionPane.showMessageDialog(null, "REGISTRO ELIMINADO");
@@ -250,15 +254,15 @@ try {
   try{
            
 
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/facultades", "root", "");
-            PreparedStatement pst = cn.prepareStatement("select * from facultad where id_facultad = ?");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/umg4", "root", "");
+            PreparedStatement pst = cn.prepareStatement("select * from facultades where id_facultad = ?");
             pst.setString(1, Txtbusqueda.getText().trim());
             
             ResultSet rs = pst.executeQuery();
             
             if(rs.next()){
-                txtNomFacu.setText(rs.getString("nombre_facultad"));
-                txtEsFacu.setText(rs.getString("estado_facultad"));
+                Txtcodigofacultad.setText(rs.getString("nombre_facultad"));
+                Txtestadofacultad.setText(rs.getString("estado_facultad"));
             } else {
                 JOptionPane.showMessageDialog(null, "CURSO NO REGISTRADO");
             }
@@ -277,8 +281,6 @@ try {
     private javax.swing.JTextField Txtcodigofacultad;
     private javax.swing.JTextField Txtestadofacultad;
     private javax.swing.JTextField Txtnombrefacultad;
-    private javax.swing.JButton btAlta;
-    private javax.swing.JButton btAlta1;
     private javax.swing.JButton btAlta2;
     private javax.swing.JButton btBaja;
     private javax.swing.JButton btBuscar;
@@ -286,22 +288,8 @@ try {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField txtCodFacu;
-    private javax.swing.JTextField txtCodFacu1;
-    private javax.swing.JTextField txtEsFacu;
-    private javax.swing.JTextField txtEsFacu1;
-    private javax.swing.JTextField txtNomFacu;
-    private javax.swing.JTextField txtNomFacu1;
     // End of variables declaration//GEN-END:variables
 }

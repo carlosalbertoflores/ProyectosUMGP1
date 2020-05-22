@@ -128,7 +128,7 @@ public class FrmMantAlumnos extends javax.swing.JInternalFrame {
         BtnCrear.setBackground(new java.awt.Color(0, 30, 60));
         BtnCrear.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         BtnCrear.setForeground(new java.awt.Color(255, 255, 255));
-        BtnCrear.setText("Crear");
+        BtnCrear.setText("Registrar");
         BtnCrear.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BtnCrear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

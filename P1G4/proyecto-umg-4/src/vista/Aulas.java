@@ -171,7 +171,7 @@ public class Aulas extends javax.swing.JInternalFrame {
         // Funcion donde se elimanar cualquier registro del contenedor
 
         try {
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/umg4", "root", "");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/a", "root", "");
             PreparedStatement pst = cn.prepareStatement("delete from aulas where ID = ?");
 
             pst.setString(1, txt_buscar.getText().trim());

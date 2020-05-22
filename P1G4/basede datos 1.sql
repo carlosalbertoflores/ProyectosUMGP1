@@ -19,7 +19,7 @@ email_maestros varchar(20),
 estatus_maestros varchar(1)
 )Engine = InnoDB ;
 
-CREATE TABLE facultad
+CREATE TABLE facultades
 (
 codigo_Facultad varchar(5) PRIMARY KEY,
 nombre_Facultad Varchar (45) ,
@@ -28,14 +28,39 @@ foreign key (codigo_Facultad) references alumnos (carnet_Alumno)
 
 )Engine = InnoDB ;
 
-CREATE TABLE Cursos
+CREATE TABLE cursos
 (
-codido_Cursos varchar(5) PRIMARY KEY,
-nombre_Cursos Varchar (45) ,
-Estatus_Cursos varchar (1),
-foreign key (codido_Cursos) references alumnos (carnet_Alumno)
+id int (20) auto_increment  primary key,
+codigo_cursos varchar(10) ,
+nombre_cursos Varchar (45) ,
+estatus_cursos varchar (20)
 )Engine = InnoDB ;
 
+CREATE TABLE transaccional
+(
+ cuenta int (10) auto_increment ,
+nombre varchar(10) ,
+carnet varchar(10) ,
+cararrea varchar(10) ,
+clase1  varchar(10) ,
+clase2  varchar(10) ,
+clase3  varchar(10) ,
+clase4  varchar(10) ,
+clase5  varchar(10) ,
+clase6  varchar(10) ,
+catedratico_1 varchar(10) ,
+catedratico_2 varchar(10) ,
+catedratico_3 varchar(10) ,
+catedratico_4 varchar(10) ,
+catedratico_5 varchar(10) ,
+catedratico_6 varchar(10) ,
+nota_1 varchar(10) ,
+nota_2 varchar(10) ,
+nota_3 varchar(10) ,
+nota_4 varchar(10) ,
+nota_5 varchar(10) ,
+nota_6 varchar(10) 
+)Engine = InnoDB ;
 CREATE TABLE Carreras
 (
 codigo_Carreras varchar(5) PRIMARY KEY,
@@ -44,14 +69,15 @@ Estatus_Carreras varchar (1),
 foreign key (codigo_Carreras) references alumnos (carnet_Alumno)
 
 )Engine = InnoDB ;
-CREATE TABLE Secciones 
+CREATE TABLE secciones
 (
-codigo_Secciones varchar(5) PRIMARY KEY,
-nombre_Secciones Varchar (45) ,
-Estatus_Secciones varchar (1),
-foreign key (codigo_Secciones) references alumnos (carnet_Alumno)
-
+id int (20) auto_increment  primary key,
+codigo_secciones varchar(10) ,
+nombre_secciones Varchar (45) ,
+estatus_secciones varchar (20)
 )Engine = InnoDB ;
+
+
 
 CREATE TABLE sedes
 (
@@ -61,22 +87,22 @@ Estatus_Sedes varchar (1),
 foreign key (codigo_Sedes) references alumnos (carnet_Alumno)
 
 )Engine = InnoDB ;
-CREATE TABLE Jornada
+CREATE TABLE jornada
 (
-codigo_jornada varchar(5) PRIMARY KEY,
+id int (20) auto_increment  primary key,
+codigo_jornada varchar(10) ,
 nombre_jornada Varchar (45) ,
-Estatus_jornada varchar (1),
-foreign key (codigo_jornada) references alumnos (carnet_Alumno)
-
+estatus_jornada varchar (20)
 )Engine = InnoDB ;
+
 CREATE TABLE aulas
 (
-codigo_aulas varchar(5) PRIMARY KEY,
+id int (20) auto_increment  primary key,
+codigo_aulas varchar(10) ,
 nombre_aulas Varchar (45) ,
-Estatus_aulas varchar (1),
-foreign key (codigo_aulas) references alumnos (carnet_Alumno)
-
+estatus_aulas varchar (20)
 )Engine = InnoDB ;
+
 CREATE TABLE asignacionalumnos
 (
 codigo_carrera varchar(15) PRIMARY KEY,

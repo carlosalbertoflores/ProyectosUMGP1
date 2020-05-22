@@ -5,10 +5,12 @@
  */
 package modelo;
 
+import com.mysql.jdbc.Statement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -18,6 +20,35 @@ import javax.swing.table.DefaultTableModel;
  * @author diego
  */
 public class SQLAlumnos extends Conexion {
+    public void cargarCarreras(JComboBox cmbCarreras){
+        try{
+            Statement st = null;
+            Connection conect = getConexion();
+            String sql = "SELECT nombre_Carreras FROM Carreras";
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next()){
+                cmbCarreras.addItem(rs.getString(2));
+            }
+        }
+        catch(SQLException ex){
+            JOptionPane.showMessageDialog(null, ex.toString());
+        }
+    }
+    
+    public void cargarSedes(JComboBox cmbSedes){
+        try{
+            Statement st = null;
+            Connection conect = getConexion();
+            String sql = "SELECT nombre_Sedes FROM sedes";
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next()){
+                cmbSedes.addItem(rs.getString(2));
+            }
+        }
+        catch(SQLException ex){
+            JOptionPane.showMessageDialog(null, ex.toString());
+        }
+    }
     public boolean registrarAlumnos(Alumnos alm){
         PreparedStatement ps = null;
         Connection conect = getConexion();
@@ -64,6 +95,9 @@ public class SQLAlumnos extends Conexion {
                 TModel.addRow(modeloA);
             }
             tabla.setModel(TModel);
+            
+            
+            
             
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e.toString());

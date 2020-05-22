@@ -48,7 +48,7 @@ public class AsignaciondeCursosMaestros extends javax.swing.JInternalFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 204, 153));
+        setBackground(new java.awt.Color(102, 102, 102));
         setVisible(true);
 
         jButton2.setBackground(new java.awt.Color(153, 153, 255));
@@ -132,7 +132,7 @@ public class AsignaciondeCursosMaestros extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         pack();
