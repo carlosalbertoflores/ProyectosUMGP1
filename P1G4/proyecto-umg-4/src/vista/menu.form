@@ -77,8 +77,11 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="subMenuAddProvedor">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Asignacion de alumnos"/>
+                <Property name="text" type="java.lang.String" value="Notas"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="subMenuAddProvedorActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
               <Properties>

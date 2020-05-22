@@ -131,7 +131,12 @@ private Secciones NuevaSecciones;
 
         menuProveedores.setText("Info Alumnos");
 
-        subMenuAddProvedor.setText("Asignacion de alumnos");
+        subMenuAddProvedor.setText("Notas");
+        subMenuAddProvedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                subMenuAddProvedorActionPerformed(evt);
+            }
+        });
         menuProveedores.add(subMenuAddProvedor);
 
         jMenuItem2.setText("Alumnos");
@@ -259,6 +264,12 @@ private Secciones NuevaSecciones;
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void subMenuAddProvedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subMenuAddProvedorActionPerformed
+        FrmNotas fNotas = new FrmNotas();
+        fNotas.setVisible(true);
+        jDesktopPane1.add(fNotas);
+    }//GEN-LAST:event_subMenuAddProvedorActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

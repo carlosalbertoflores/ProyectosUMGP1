@@ -119,19 +119,41 @@ FOREIGN KEY (carnet_alumno) REFERENCES alumnos(carnet_Alumnos);
 
 CREATE TABLE asignacionamaestros
 (
-codigo_carrera varchar(5),
-codigo_sede varchar(5) ,
-codigo_jornada  VARCHAR(5),
-codigo_seccion Varchar(5),
-codigo_aula varchar(5),
-codigo_curso varchar(5),
+codigo_mcarrera varchar(5),
+codigo_msede varchar(5) ,
+codigo_mjornada  VARCHAR(5),
+codigo_mseccion Varchar(5),
+codigo_maula varchar(5),
+codigo_mcurso varchar(5),
 codigo_maestrolumno varchar(5)
 )Engine = InnoDB ;
 
 ALTER TABLE asignacionamaestros
-ADD CONSTRAINT codigo_carrera
-foreign key (codigo_carrera) references Carreras(codigo_Carreras);
+ADD CONSTRAINT codigo_mcarrera
+foreign key (codigo_mcarrera) references Carreras(codigo_Carreras);
 
+ALTER TABLE asignacionamaestros
+ADD CONSTRAINT codigo_msede
+FOREIGN KEY (codigo_msede) REFERENCES sedes(codigo_Sedes);
 
+ALTER TABLE asignacionamaestros
+ADD CONSTRAINT codigo_mjornada
+FOREIGN KEY (codigo_mjornada) REFERENCES Jornada(codigo_jornada);
+
+ALTER TABLE asignacionamaestros
+ADD CONSTRAINT codigo_mseccion
+FOREIGN KEY (codigo_mseccion) REFERENCES secciones(codigo_secciones);
+
+ALTER TABLE asignacionamaestros
+ADD CONSTRAINT codigo_maula
+FOREIGN KEY (codigo_maula) REFERENCES aulas(codigo_aulas);
+
+ALTER TABLE asignacionamaestros
+ADD CONSTRAINT codigo_mcurso
+FOREIGN KEY (codigo_mcurso) REFERENCES Cursos(codido_Cursos);
+
+ALTER TABLE asignacionamaestros
+ADD CONSTRAINT codigo_maestrolumno
+FOREIGN KEY (codigo_maestrolumno) REFERENCES maestros(codigo_maestros);
 
 
