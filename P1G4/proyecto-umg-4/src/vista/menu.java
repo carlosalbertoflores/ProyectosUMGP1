@@ -207,7 +207,7 @@ jDesktopPane1.add(NuevaVentana11);
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
 NuevaVentana10 = new ManCarreras2();
 jDesktopPane1.add(NuevaVentana10);
-
+        
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
