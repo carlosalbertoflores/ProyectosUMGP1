@@ -11,12 +11,12 @@ import javax.swing.JOptionPane;
  *
  * @author familia Sipaque
  */
-public class Secciones extends javax.swing.JInternalFrame {
+public class Cursos extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form Secciones
+     * Creates new form Cursos
      */
-    public Secciones() {
+    public Cursos() {
         initComponents();
     }
 
@@ -30,27 +30,26 @@ public class Secciones extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         panel1 = new java.awt.Panel();
+        jLabel13 = new javax.swing.JLabel();
+        txt_3 = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
         txt_2 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
         txt_buscar = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         label_status = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         txt_1 = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
-        txt_3 = new javax.swing.JTextField();
-
-        setClosable(true);
-        setIconifiable(true);
-        setMaximizable(true);
-        setVisible(true);
 
         panel1.setBackground(new java.awt.Color(51, 51, 51));
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Ingrese el codigo de Curso:");
 
         jButton6.setText("Eliminar");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -59,16 +58,16 @@ public class Secciones extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Mantenimiento secciones");
-
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Codigo Sección:");
+        jLabel11.setText("Codigo de Curso:");
 
         label_status.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        label_status.setForeground(new java.awt.Color(255, 51, 51));
+        label_status.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Mantenimiento de Cursos");
 
         jButton2.setText("Buscar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -93,15 +92,11 @@ public class Secciones extends javax.swing.JInternalFrame {
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Nombre del sección:");
+        jLabel3.setText("Nombre de Curso:");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Estatus del sección:");
-
-        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Ingrese el codigo sección :");
+        jLabel4.setText("Estatus de Curso:");
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
@@ -110,26 +105,23 @@ public class Secciones extends javax.swing.JInternalFrame {
             .addGroup(panel1Layout.createSequentialGroup()
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel1Layout.createSequentialGroup()
-                        .addGap(132, 132, 132)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panel1Layout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panel1Layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
-                                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(txt_3, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel11)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(txt_1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(txt_2, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel1Layout.createSequentialGroup()
+                                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel3)
+                                            .addComponent(jLabel4))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txt_3, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txt_2, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addGroup(panel1Layout.createSequentialGroup()
                                 .addGap(23, 23, 23)
                                 .addComponent(jButton1)
@@ -144,8 +136,11 @@ public class Secciones extends javax.swing.JInternalFrame {
                                 .addComponent(txt_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jButton2))
-                            .addComponent(label_status, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(108, Short.MAX_VALUE))
+                            .addComponent(label_status, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addGap(132, 132, 132)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
         panel1Layout.setVerticalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,10 +151,13 @@ public class Secciones extends javax.swing.JInternalFrame {
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(txt_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txt_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel3))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -176,29 +174,29 @@ public class Secciones extends javax.swing.JInternalFrame {
                     .addComponent(jButton2))
                 .addGap(18, 18, 18)
                 .addComponent(label_status, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-       // Funcion donde se elimanar cualquier registro del contenedor
+        // TODO add your handling code here:
 
         try {
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/umg4", "root", "");
-            PreparedStatement pst = cn.prepareStatement("delete from secciones where ID = ?");
+            PreparedStatement pst = cn.prepareStatement("delete from cursos where ID = ?");
 
             pst.setString(1, txt_buscar.getText().trim());
             pst.executeUpdate();
@@ -214,22 +212,22 @@ public class Secciones extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        //Funcion de donde se busca los registros y buscar si esta registrado o no
+        // TODO add your handling code here:
         try {
             Connection cn;
             cn = DriverManager.getConnection("jdbc:mysql://localhost/umg4", "root", "");
-            PreparedStatement pst = cn.prepareStatement("select * from secciones where ID = ?");
+            PreparedStatement pst = cn.prepareStatement("select * from cursos where ID = ?");
             pst.setString(1, txt_buscar.getText().trim());
             ResultSet rs = pst.executeQuery();
 
             if (rs.next()) {
 
-                txt_1.setText(rs.getString("codigo_secciones"));
-                txt_2.setText(rs.getString("nombre_secciones"));
-                txt_3.setText(rs.getString("estatus_secciones"));
+                txt_1.setText(rs.getString("codigo_cursos"));
+                txt_2.setText(rs.getString("nombre_cursos"));
+                txt_3.setText(rs.getString("estatus_cursos"));
 
             } else {
-                JOptionPane.showMessageDialog(null, " no registrado.");
+                JOptionPane.showMessageDialog(null, " No registrado.");
             }
 
         } catch (Exception e) {
@@ -238,12 +236,11 @@ public class Secciones extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-       //funcion donde se modifca cualquier error o problema
         try {
             String ID = txt_buscar.getText().trim();
 
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/umg4", "root", "");
-            PreparedStatement pst = cn.prepareStatement("update secciones set codigo_secciones = ?, nombre_secciones = ?, estatus_secciones = ?  where ID = " + ID);
+            PreparedStatement pst = cn.prepareStatement("update cursos set codigo_cursos = ?, nombre_cursos = ?, estatus_cursos = ?  where ID = " + ID);
 
             pst.setString(1, txt_1.getText().trim());
             pst.setString(2, txt_2.getText().trim());
@@ -258,11 +255,11 @@ public class Secciones extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // se registran todo los nuevos manteniminetos de secciones
+        // se registran todo los empleados
         try {
 
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/umg4", "root", "");
-            PreparedStatement pst = cn.prepareStatement("insert into secciones values(?,?,?,?)");
+            PreparedStatement pst = cn.prepareStatement("insert into cursos values(?,?,?,?)");
 
             pst.setString(1, "0");
             pst.setString(2, txt_1.getText().trim());

@@ -55,9 +55,10 @@ foreign key (codigo_Secciones) references alumnos (carnet_Alumno)
 
 CREATE TABLE sedes
 (
-codigo_Sedes varchar(5) PRIMARY KEY,
-nombre_Sedes Varchar (45) ,
-Estatus_Sedes varchar (1),
+id int (20) auto_increment  primary key,
+codigo_sedes varchar(5) ,
+nombre_sedes Varchar (45) ,
+estatus_sedes varchar (20),
 foreign key (codigo_Sedes) references alumnos (carnet_Alumno)
 
 )Engine = InnoDB ;
